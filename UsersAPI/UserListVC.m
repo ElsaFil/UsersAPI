@@ -1,18 +1,18 @@
 //
-//  ViewController.m
+//  UserListVC.m
 //  UsersAPI
 //
 //  Created by Elsa Filippidou on 18/03/16.
 //  Copyright © 2016 Elsa Filippidou. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "UserListVC.h"
 
-@interface ViewController () <UITableViewDataSource, UITableViewDelegate>
+@interface UserListVC () <UITableViewDataSource, UITableViewDelegate>
 
 @end
 
-@implementation ViewController
+@implementation UserListVC
 
 - (void)viewDidLoad {
     [super viewDidLoad];

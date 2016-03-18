@@ -9,12 +9,13 @@
 /* Begin PBXBuildFile section */
 		681B2DD31C9C6E8400BA0953 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 681B2DD21C9C6E8400BA0953 /* main.m */; };
 		681B2DD61C9C6E8400BA0953 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 681B2DD51C9C6E8400BA0953 /* AppDelegate.m */; };
-		681B2DD91C9C6E8400BA0953 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 681B2DD81C9C6E8400BA0953 /* ViewController.m */; };
+		681B2DD91C9C6E8400BA0953 /* UserListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 681B2DD81C9C6E8400BA0953 /* UserListVC.m */; };
 		681B2DDC1C9C6E8400BA0953 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 681B2DDA1C9C6E8400BA0953 /* Main.storyboard */; };
 		681B2DDE1C9C6E8400BA0953 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 681B2DDD1C9C6E8400BA0953 /* Assets.xcassets */; };
 		681B2DE11C9C6E8400BA0953 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 681B2DDF1C9C6E8400BA0953 /* LaunchScreen.storyboard */; };
 		681B2DEC1C9C6E8400BA0953 /* UsersAPITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 681B2DEB1C9C6E8400BA0953 /* UsersAPITests.m */; };
 		681B2DF71C9C6E8500BA0953 /* UsersAPIUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 681B2DF61C9C6E8500BA0953 /* UsersAPIUITests.m */; };
+		681B2E071C9C799600BA0953 /* UsersModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 681B2E051C9C799600BA0953 /* UsersModel.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,8 +40,8 @@
 		681B2DD21C9C6E8400BA0953 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		681B2DD41C9C6E8400BA0953 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		681B2DD51C9C6E8400BA0953 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		681B2DD71C9C6E8400BA0953 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		681B2DD81C9C6E8400BA0953 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		681B2DD71C9C6E8400BA0953 /* UserListVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserListVC.h; sourceTree = "<group>"; };
+		681B2DD81C9C6E8400BA0953 /* UserListVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserListVC.m; sourceTree = "<group>"; };
 		681B2DDB1C9C6E8400BA0953 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		681B2DDD1C9C6E8400BA0953 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		681B2DE01C9C6E8400BA0953 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -51,6 +52,8 @@
 		681B2DF21C9C6E8500BA0953 /* UsersAPIUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UsersAPIUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		681B2DF61C9C6E8500BA0953 /* UsersAPIUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UsersAPIUITests.m; sourceTree = "<group>"; };
 		681B2DF81C9C6E8500BA0953 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		681B2E041C9C78A500BA0953 /* UsersAPI-PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UsersAPI-PrefixHeader.pch"; sourceTree = "<group>"; };
+		681B2E061C9C799600BA0953 /* UsersModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = UsersModel.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,14 +104,14 @@
 		681B2DD01C9C6E8400BA0953 /* UsersAPI */ = {
 			isa = PBXGroup;
 			children = (
+				681B2E051C9C799600BA0953 /* UsersModel.xcdatamodeld */,
 				681B2DD41C9C6E8400BA0953 /* AppDelegate.h */,
 				681B2DD51C9C6E8400BA0953 /* AppDelegate.m */,
-				681B2DD71C9C6E8400BA0953 /* ViewController.h */,
-				681B2DD81C9C6E8400BA0953 /* ViewController.m */,
+				681B2DD71C9C6E8400BA0953 /* UserListVC.h */,
+				681B2DD81C9C6E8400BA0953 /* UserListVC.m */,
 				681B2DDA1C9C6E8400BA0953 /* Main.storyboard */,
 				681B2DDD1C9C6E8400BA0953 /* Assets.xcassets */,
 				681B2DDF1C9C6E8400BA0953 /* LaunchScreen.storyboard */,
-				681B2DE21C9C6E8400BA0953 /* Info.plist */,
 				681B2DD11C9C6E8400BA0953 /* Supporting Files */,
 			);
 			path = UsersAPI;
@@ -117,7 +120,9 @@
 		681B2DD11C9C6E8400BA0953 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				681B2DE21C9C6E8400BA0953 /* Info.plist */,
 				681B2DD21C9C6E8400BA0953 /* main.m */,
+				681B2E041C9C78A500BA0953 /* UsersAPI-PrefixHeader.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -270,8 +275,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				681B2DD91C9C6E8400BA0953 /* ViewController.m in Sources */,
+				681B2DD91C9C6E8400BA0953 /* UserListVC.m in Sources */,
 				681B2DD61C9C6E8400BA0953 /* AppDelegate.m in Sources */,
+				681B2E071C9C799600BA0953 /* UsersModel.xcdatamodeld in Sources */,
 				681B2DD31C9C6E8400BA0953 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -353,6 +359,7 @@
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREFIX_HEADER = "UsersAPI/UsersAPI-PrefixHeader.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -395,6 +402,7 @@
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "UsersAPI/UsersAPI-PrefixHeader.pch";
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -413,6 +421,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = "UsersAPI/UsersAPI-PrefixHeader.pch";
 				INFOPLIST_FILE = UsersAPI/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.elsafilippidou.iphone.UsersAPI;
@@ -424,6 +433,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = "UsersAPI/UsersAPI-PrefixHeader.pch";
 				INFOPLIST_FILE = UsersAPI/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.elsafilippidou.iphone.UsersAPI;
@@ -516,6 +526,19 @@
 			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		681B2E051C9C799600BA0953 /* UsersModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				681B2E061C9C799600BA0953 /* UsersModel.xcdatamodel */,
+			);
+			currentVersion = 681B2E061C9C799600BA0953 /* UsersModel.xcdatamodel */;
+			path = UsersModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 681B2DC61C9C6E8400BA0953 /* Project object */;
 }

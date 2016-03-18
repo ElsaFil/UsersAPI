@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="9525" systemVersion="15D21" minimumToolsVersion="Xcode 7.0">
+    <entity name="Address" syncable="YES">
+        <attribute name="city" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="coordLat" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="coordLon" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="street" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="suite" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="zipcode" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Company" syncable="YES">
+        <attribute name="compBs" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="compName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="compPhrase" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="User" syncable="YES">
+        <attribute name="userEmail" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="userID" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="userName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="userPhone" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="userUsername" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="userWebsite" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="userAddress" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Address" syncable="YES"/>
+        <relationship name="userCompany" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Company" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="User" positionX="-405" positionY="-81" width="128" height="163"/>
+        <element name="Address" positionX="-155" positionY="-252" width="128" height="133"/>
+        <element name="Company" positionX="-299" positionY="-270" width="128" height="90"/>
+    </elements>
+</model>
