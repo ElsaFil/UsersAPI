@@ -16,6 +16,7 @@
 @dynamic userEmail;
 @dynamic userID;
 @dynamic userName;
+@dynamic userLastname;
 @dynamic userPhone;
 @dynamic userUsername;
 @dynamic userWebsite;
