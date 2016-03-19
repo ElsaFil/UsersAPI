@@ -69,7 +69,9 @@
                                             // save user info in core data
                                             for (int i=0; i < userData.count; i++) {
                                                 NSDictionary *aUser = [userData objectAtIndex:i];
+                                                
                                                 User *nUser = [NSEntityDescription insertNewObjectForEntityForName:@"User" inManagedObjectContext:self.managedObjectContext];
+                                                
                                                 nUser.userName = [aUser objectForKey:@"name"];
                                                 nUser.userUsername = [aUser objectForKey:@"username"];
                                                 nUser.userID = [aUser objectForKey:@"id"];
@@ -78,7 +80,7 @@
                                                 nUser.userPhone = [aUser objectForKey:@"phone"];
                                                 
                                                 if (![self.managedObjectContext save:&error]) {
-                                                    NSLog(@"Whoops, couldn't save badges: %@", [error localizedDescription]);
+                                                    NSLog(@"Couldn't save with error: %@", [error localizedDescription]);
                                                 }
                                                 
                                             }
@@ -141,7 +143,7 @@
     
     if (usersArray) {
         User *userForRow = [usersArray objectAtIndex:indexPath.row];
-        cell.textLabel.text = userForRow.userName;
+        cell.textLabel.text = [NSString stringWithFormat:@"%@", userForRow.userName];
     } else {
         cell.textLabel.text = @"no user data";
     }
