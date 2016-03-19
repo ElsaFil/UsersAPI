@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-#import "UserListVC.h"
+#import "StartPageVC.h"
 
 @interface AppDelegate ()
 
@@ -23,7 +23,7 @@
     // Override point for customization after application launch.
     
     // pass managedObjectContext to next page
-    UserListVC *startPage = (UserListVC *)self.window.rootViewController;
+    StartPageVC *startPage = (StartPageVC *)self.window.rootViewController;
     startPage.managedObjectContext = self.managedObjectContext;
     
     // Configure Window

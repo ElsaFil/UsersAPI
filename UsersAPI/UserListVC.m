@@ -48,6 +48,10 @@
         
         [self getData];
     }
+    
+    [_usersLabel setHidden:FALSE];
+    [_usersCountLabel setHidden:FALSE];
+    _usersCountLabel.text = [NSString stringWithFormat:@"%lu",(unsigned long)usersArray.count];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -148,8 +152,13 @@
         cell.textLabel.text = @"no user data";
     }
     
-    
     return cell;
+}
+
+# pragma mark - Navigation
+
+- (IBAction)returnToUserList:(UIStoryboardSegue *)unwindSegue {
+    
 }
 
 @end
