@@ -11,7 +11,7 @@
 
 @interface UserListVC () <UITableViewDataSource, UITableViewDelegate> {
     
-    NSArray *usersArray;
+    NSMutableArray *usersArray;
 }
 
 @end
@@ -114,7 +114,12 @@
     [fetchRequest setEntity:entity];
     NSError *error;
     
-    usersArray = [self.managedObjectContext executeFetchRequest:fetchRequest error:&error];
+    usersArray = [NSMutableArray arrayWithArray:[self.managedObjectContext executeFetchRequest:fetchRequest error:&error]];
+    
+    // sort array alphabetically
+    [usersArray sortUsingComparator:^(User *a, User *b) {
+        return [a.userName compare:b.userName];
+    }];
 }
 
 # pragma mark - Table View delegate methods
