@@ -25,6 +25,9 @@
     
     _titleLabel.text = @"Users";
     
+    _usersLabel.text = @"Total users: ";
+    _usersCountLabel.text = @"0";
+    
     [_loadingLabel setHidden:TRUE];
     [_loadingSpin setHidden:TRUE];
     
@@ -35,9 +38,10 @@
     [self updateListOfUsers];
     
     if (usersArray.count == 0) {
-        
         // no previous data, get data from API
         // show loading indicator
+        [_usersLabel setHidden:TRUE];
+        [_usersCountLabel setHidden:TRUE];
         [_loadingLabel setHidden:FALSE];
         [_loadingSpin setHidden:FALSE];
         [_loadingSpin startAnimating];
@@ -86,9 +90,13 @@
                                                 
                                                 [_loadingLabel setHidden:TRUE];
                                                 [_loadingSpin setHidden:TRUE];
-                                                [_loadingSpin startAnimating];
+                                                [_loadingSpin stopAnimating];
                                                 
                                                 [_tableView reloadData];
+                                                
+                                                [_usersLabel setHidden:FALSE];
+                                                [_usersCountLabel setHidden:FALSE];
+                                                _usersCountLabel.text = [NSString stringWithFormat:@"%lu",(unsigned long)usersArray.count];
                                             });
                                             
                                         }
@@ -107,8 +115,6 @@
     NSError *error;
     
     usersArray = [self.managedObjectContext executeFetchRequest:fetchRequest error:&error];
-    
-    NSLog(@"number of users: %lu", (unsigned long)usersArray.count);
 }
 
 # pragma mark - Table View delegate methods

@@ -14,6 +14,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property (weak, nonatomic) IBOutlet UILabel *loadingLabel;
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *loadingSpin;
+@property (weak, nonatomic) IBOutlet UILabel *usersLabel;
+@property (weak, nonatomic) IBOutlet UILabel *usersCountLabel;
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
