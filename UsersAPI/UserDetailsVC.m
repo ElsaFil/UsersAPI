@@ -19,6 +19,18 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    _titleLabel.text = _currentUser.userName;
+    
+    _theUsernameLabel.text = _currentUser.userUsername;
+    _theIDLabel.text = [NSString stringWithFormat:@"%@", _currentUser.userID];
+    _theCompanyLabel.text = _currentUser.userCompany.compName;
+    
+    _thePhoneLabel.text = _currentUser.userPhone;
+    _theMailLabel.text = _currentUser.userEmail;
+    
+    [_websiteButton.titleLabel setText:_currentUser.userWebsite];
+    [_addressButton.titleLabel setText:[NSString stringWithFormat:@"%@, %@, %@, %@", _currentUser.userAddress.street, _currentUser.userAddress.suite, _currentUser.userAddress.zipcode, _currentUser.userAddress.city]];
+    
     // getData
     // here, not in previous view controller, to miminize the work load
     [self getData];

@@ -8,10 +8,12 @@
 
 #import "UserListVC.h"
 #import "User.h"
+#import "UserDetailsVC.h"
 
 @interface UserListVC () <UITableViewDataSource, UITableViewDelegate> {
     
     NSMutableArray *usersArray;
+    NSInteger indexForUser;
 }
 
 @end
@@ -155,10 +157,26 @@
     return cell;
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    indexForUser = indexPath.row;
+    
+    [self performSegueWithIdentifier:@"goToUserDetails" sender:self];
+}
+
 # pragma mark - Navigation
 
 - (IBAction)returnToUserList:(UIStoryboardSegue *)unwindSegue {
     
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"goToUserDetails"]) {
+        UserDetailsVC *detailsVC = [[UserDetailsVC alloc] init];
+        detailsVC = segue.destinationViewController;
+        detailsVC.currentUser = [usersArray objectAtIndex:indexForUser];
+        detailsVC.managedObjectContext = self.managedObjectContext;
+    }
 }
 
 @end
