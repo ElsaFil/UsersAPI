@@ -7,6 +7,7 @@
 //
 
 #import "UserDetailsVC.h"
+#import "UserActionsVC.h"
 
 @interface UserDetailsVC ()
 
@@ -30,30 +31,12 @@
     [_addressButton setTitle:addressString forState:UIControlStateNormal];
     [_emailButton setTitle:_currentUser.userEmail forState:UIControlStateNormal];
     [_phoneButton setTitle:_currentUser.userPhone forState:UIControlStateNormal];
-    
-    // getData - API request
-    // here, not in previous view controller, to miminize the work load
-    [self getData];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-- (void) getData {
-    
-}
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 - (IBAction)goToWebsite:(id)sender {
     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:[NSString stringWithFormat:@"http://%@", _currentUser.userWebsite]]];
@@ -70,5 +53,42 @@
 - (IBAction)callPhonenumber:(id)sender {
     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:[[NSString stringWithFormat:@"tel:%@", _currentUser.userPhone] stringByRemovingPercentEncoding]]];
 }
+
+- (IBAction)showAction:(id)sender {
+    [self performSegueWithIdentifier:@"goToUserActions" sender:sender];
+}
+
+
+#pragma mark - Navigation
+
+// return from user actions page
+- (IBAction)returnToUser:(UIStoryboardSegue *)unwindSegue {
+    
+    UserActionsVC *userActionsPage = [[UserActionsVC alloc]init];
+    userActionsPage = unwindSegue.sourceViewController;
+    self.currentUser = userActionsPage.currentUser;
+    self.managedObjectContext = userActionsPage.managedObjectContext;
+}
+ 
+// In a storyboard-based application, you will often want to do a little preparation before navigation
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    
+    // go to user actions page, define if should show posts, albums or to-do's and pass current user
+    if ([segue.identifier isEqualToString:@"goToUserActions"]) {
+        UserActionsVC *userActionPage = [[UserActionsVC alloc]init];
+        userActionPage = segue.destinationViewController;
+        userActionPage.managedObjectContext = self.managedObjectContext;
+        userActionPage.currentUser = self.currentUser;
+        
+        if (sender == _postsButton) {
+            userActionPage.action = @"posts";
+        } else if (sender == _albumsButton) {
+            userActionPage.action = @"albums";
+        } else if (sender == _albumsButton) {
+            userActionPage.action = @"todos";
+        }
+    }
+}
+
 
 @end

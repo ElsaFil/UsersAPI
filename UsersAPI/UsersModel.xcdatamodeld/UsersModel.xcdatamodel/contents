@@ -15,6 +15,12 @@
         <attribute name="compPhrase" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="employee" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="User" inverseName="userCompany" inverseEntity="User" syncable="YES"/>
     </entity>
+    <entity name="Post" representedClassName="Post" syncable="YES">
+        <attribute name="postBody" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="postID" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="postTitle" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="postUserID" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+    </entity>
     <entity name="User" representedClassName="User" syncable="YES">
         <attribute name="userEmail" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="userID" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
@@ -29,5 +35,6 @@
         <element name="Address" positionX="-155" positionY="-241" width="128" height="150"/>
         <element name="Company" positionX="-299" positionY="-270" width="128" height="103"/>
         <element name="User" positionX="-405" positionY="-81" width="128" height="163"/>
+        <element name="Post" positionX="-279" positionY="-117" width="128" height="105"/>
     </elements>
 </model>

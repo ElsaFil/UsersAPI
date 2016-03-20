@@ -41,8 +41,8 @@
     // check if previous data exists
     [self updateListOfUsers];
     
+    // no previous data, get data from API
     if (usersArray.count == 0) {
-        // no previous data, get data from API
         // show loading indicator
         [_usersLabel setHidden:TRUE];
         [_usersCountLabel setHidden:TRUE];
@@ -180,7 +180,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"BasicCell"];
     
-    if (usersArray) {
+    if (usersArray.count >= indexPath.row) {
         User *userForRow = [usersArray objectAtIndex:indexPath.row];
         cell.textLabel.text = [NSString stringWithFormat:@"%@", userForRow.userName];
     } else {

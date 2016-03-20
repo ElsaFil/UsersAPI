@@ -24,6 +24,10 @@
 		687DC92F1C9D56C200305690 /* Address.m in Sources */ = {isa = PBXBuildFile; fileRef = 687DC9291C9D56C200305690 /* Address.m */; };
 		687DC9331C9D7FBE00305690 /* StartPageVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 687DC9321C9D7FBE00305690 /* StartPageVC.m */; };
 		687DC9361C9D840500305690 /* UserDetailsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 687DC9351C9D840500305690 /* UserDetailsVC.m */; };
+		68A04BDB1C9EF96A003FB77B /* UserActionsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 68A04BDA1C9EF96A003FB77B /* UserActionsVC.m */; };
+		68A04BE01C9F0293003FB77B /* Post+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 68A04BDD1C9F0293003FB77B /* Post+CoreDataProperties.m */; };
+		68A04BE11C9F0293003FB77B /* Post.m in Sources */ = {isa = PBXBuildFile; fileRef = 68A04BDF1C9F0293003FB77B /* Post.m */; };
+		68A04BE71C9F1555003FB77B /* CustomCellTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 68A04BE61C9F1555003FB77B /* CustomCellTVC.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +82,14 @@
 		687DC9321C9D7FBE00305690 /* StartPageVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StartPageVC.m; sourceTree = "<group>"; };
 		687DC9341C9D840500305690 /* UserDetailsVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserDetailsVC.h; sourceTree = "<group>"; };
 		687DC9351C9D840500305690 /* UserDetailsVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserDetailsVC.m; sourceTree = "<group>"; };
+		68A04BD91C9EF96A003FB77B /* UserActionsVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserActionsVC.h; sourceTree = "<group>"; };
+		68A04BDA1C9EF96A003FB77B /* UserActionsVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserActionsVC.m; sourceTree = "<group>"; };
+		68A04BDC1C9F0293003FB77B /* Post+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Post+CoreDataProperties.h"; sourceTree = "<group>"; };
+		68A04BDD1C9F0293003FB77B /* Post+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Post+CoreDataProperties.m"; sourceTree = "<group>"; };
+		68A04BDE1C9F0293003FB77B /* Post.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Post.h; sourceTree = "<group>"; };
+		68A04BDF1C9F0293003FB77B /* Post.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Post.m; sourceTree = "<group>"; };
+		68A04BE51C9F1555003FB77B /* CustomCellTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomCellTVC.h; sourceTree = "<group>"; };
+		68A04BE61C9F1555003FB77B /* CustomCellTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomCellTVC.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +149,10 @@
 				681B2DD81C9C6E8400BA0953 /* UserListVC.m */,
 				687DC9341C9D840500305690 /* UserDetailsVC.h */,
 				687DC9351C9D840500305690 /* UserDetailsVC.m */,
+				68A04BD91C9EF96A003FB77B /* UserActionsVC.h */,
+				68A04BDA1C9EF96A003FB77B /* UserActionsVC.m */,
+				68A04BE51C9F1555003FB77B /* CustomCellTVC.h */,
+				68A04BE61C9F1555003FB77B /* CustomCellTVC.m */,
 				681B2DDA1C9C6E8400BA0953 /* Main.storyboard */,
 				681B2DDD1C9C6E8400BA0953 /* Assets.xcassets */,
 				681B2DDF1C9C6E8400BA0953 /* LaunchScreen.storyboard */,
@@ -189,6 +205,10 @@
 				687DC9271C9D56C200305690 /* Address+CoreDataProperties.m */,
 				687DC9281C9D56C200305690 /* Address.h */,
 				687DC9291C9D56C200305690 /* Address.m */,
+				68A04BDC1C9F0293003FB77B /* Post+CoreDataProperties.h */,
+				68A04BDD1C9F0293003FB77B /* Post+CoreDataProperties.m */,
+				68A04BDE1C9F0293003FB77B /* Post.h */,
+				68A04BDF1C9F0293003FB77B /* Post.m */,
 			);
 			name = DataModel;
 			sourceTree = "<group>";
@@ -325,14 +345,18 @@
 			files = (
 				687DC92A1C9D56C200305690 /* User+CoreDataProperties.m in Sources */,
 				681B2DD91C9C6E8400BA0953 /* UserListVC.m in Sources */,
+				68A04BE71C9F1555003FB77B /* CustomCellTVC.m in Sources */,
 				687DC9331C9D7FBE00305690 /* StartPageVC.m in Sources */,
 				687DC92B1C9D56C200305690 /* User.m in Sources */,
 				687DC92D1C9D56C200305690 /* Company.m in Sources */,
 				687DC92C1C9D56C200305690 /* Company+CoreDataProperties.m in Sources */,
 				687DC92E1C9D56C200305690 /* Address+CoreDataProperties.m in Sources */,
+				68A04BDB1C9EF96A003FB77B /* UserActionsVC.m in Sources */,
 				681B2DD61C9C6E8400BA0953 /* AppDelegate.m in Sources */,
 				687DC9361C9D840500305690 /* UserDetailsVC.m in Sources */,
+				68A04BE11C9F0293003FB77B /* Post.m in Sources */,
 				681B2E071C9C799600BA0953 /* UsersModel.xcdatamodeld in Sources */,
+				68A04BE01C9F0293003FB77B /* Post+CoreDataProperties.m in Sources */,
 				687DC92F1C9D56C200305690 /* Address.m in Sources */,
 				681B2DD31C9C6E8400BA0953 /* main.m in Sources */,
 			);
