@@ -28,8 +28,9 @@
     _thePhoneLabel.text = _currentUser.userPhone;
     _theMailLabel.text = _currentUser.userEmail;
     
-    [_websiteButton.titleLabel setText:_currentUser.userWebsite];
-    [_addressButton.titleLabel setText:[NSString stringWithFormat:@"%@, %@, %@, %@", _currentUser.userAddress.street, _currentUser.userAddress.suite, _currentUser.userAddress.zipcode, _currentUser.userAddress.city]];
+    NSString *addressString = [NSString stringWithFormat:@"%@, %@, %@, %@", _currentUser.userAddress.street, _currentUser.userAddress.suite, _currentUser.userAddress.zipcode, _currentUser.userAddress.city];
+    [_websiteButton setTitle:_currentUser.userWebsite forState:UIControlStateNormal];
+    [_addressButton setTitle:addressString forState:UIControlStateNormal];
     
     // getData
     // here, not in previous view controller, to miminize the work load

@@ -8,6 +8,8 @@
 
 #import "UserListVC.h"
 #import "User.h"
+#import "Address.h"
+#import "Company.h"
 #import "UserDetailsVC.h"
 
 @interface UserListVC () <UITableViewDataSource, UITableViewDelegate> {
@@ -72,25 +74,34 @@
                                             NSError *error;
                                             NSArray *userData = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
                                             
-                                            // save user info in core data
+                                            // break down API data
                                             for (int i=0; i < userData.count; i++) {
                                                 NSDictionary *aUser = [userData objectAtIndex:i];
                                                 
+                                                // setup Address and Company
+                                                Address *nAddress = [self setupAddress:[aUser objectForKey:@"address"]];
+                                                Company *nCompany = [self setupCompany:[aUser objectForKey:@"company"]];
+                                                
                                                 User *nUser = [NSEntityDescription insertNewObjectForEntityForName:@"User" inManagedObjectContext:self.managedObjectContext];
                                                 
+                                                // setup user info
                                                 nUser.userName = [aUser objectForKey:@"name"];
                                                 nUser.userUsername = [aUser objectForKey:@"username"];
                                                 nUser.userID = [aUser objectForKey:@"id"];
                                                 nUser.userEmail = [aUser objectForKey:@"email"];
                                                 nUser.userWebsite = [aUser objectForKey:@"website"];
                                                 nUser.userPhone = [aUser objectForKey:@"phone"];
+                                                nUser.userAddress = nAddress;
+                                                nUser.userCompany = nCompany;
                                                 
+                                                // save in Core Data
                                                 if (![self.managedObjectContext save:&error]) {
                                                     NSLog(@"Couldn't save with error: %@", [error localizedDescription]);
                                                 }
                                                 
                                             }
                                             
+                                            // update array with users
                                             [self updateListOfUsers];
                                             
                                             // update UI in main thread
@@ -110,6 +121,25 @@
                                         }
                                   ];
     [task resume];
+}
+
+- (Address*) setupAddress:(NSDictionary *)dict {
+    Address *nAddress = [NSEntityDescription insertNewObjectForEntityForName:@"Address" inManagedObjectContext:self.managedObjectContext];
+    nAddress.street = [dict objectForKey:@"street"];
+    nAddress.suite = [dict objectForKey:@"suite"];
+    nAddress.city = [dict objectForKey:@"city"];
+    nAddress.zipcode = [dict objectForKey:@"zipcode"];
+    
+    return nAddress;
+}
+
+- (Company*) setupCompany:(NSDictionary *)dict {
+    Company *nCompany = [NSEntityDescription insertNewObjectForEntityForName:@"Company" inManagedObjectContext:self.managedObjectContext];
+    nCompany.compName = [dict objectForKey:@"name"];
+    nCompany.compPhrase = [dict objectForKey:@"catchPhrase"];
+    nCompany.compBs = [dict objectForKey:@"bs"];
+    
+    return nCompany;
 }
 
 - (void) updateListOfUsers {
