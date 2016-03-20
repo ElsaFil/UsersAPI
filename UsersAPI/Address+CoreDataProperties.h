@@ -16,8 +16,8 @@ NS_ASSUME_NONNULL_BEGIN
 @interface Address (CoreDataProperties)
 
 @property (nullable, nonatomic, retain) NSString *city;
-@property (nullable, nonatomic, retain) NSNumber *coordLat;
-@property (nullable, nonatomic, retain) NSNumber *coordLon;
+@property (nullable, nonatomic, retain) NSString *coordLat;
+@property (nullable, nonatomic, retain) NSString *coordLon;
 @property (nullable, nonatomic, retain) NSString *street;
 @property (nullable, nonatomic, retain) NSString *suite;
 @property (nullable, nonatomic, retain) NSString *zipcode;

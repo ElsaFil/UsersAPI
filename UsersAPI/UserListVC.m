@@ -130,6 +130,9 @@
     nAddress.city = [dict objectForKey:@"city"];
     nAddress.zipcode = [dict objectForKey:@"zipcode"];
     
+    nAddress.coordLat = [[dict objectForKey:@"geo"] objectForKey:@"lat"];
+    nAddress.coordLon = [[dict objectForKey:@"geo"] objectForKey:@"lng"];
+    
     return nAddress;
 }
 

@@ -36,4 +36,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *albumsButton;
 @property (weak, nonatomic) IBOutlet UIButton *todoButton;
 
+- (IBAction)goToWebsite:(id)sender;
+- (IBAction)goToAddress:(id)sender;
+
 @end

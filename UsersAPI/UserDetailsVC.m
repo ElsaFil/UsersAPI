@@ -56,4 +56,12 @@
 }
 */
 
+- (IBAction)goToWebsite:(id)sender {
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:[NSString stringWithFormat:@"http://%@", _currentUser.userWebsite]]];
+}
+
+- (IBAction)goToAddress:(id)sender {
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:[NSString stringWithFormat:@"http://maps.google.com/?q=%@,%@",_currentUser.userAddress.coordLat, _currentUser.userAddress.coordLon]]];
+}
+
 @end
