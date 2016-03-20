@@ -270,7 +270,7 @@
                                     <constraint firstAttribute="height" constant="37" id="M1J-kt-HiA"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="37" id="PCE-8a-i5K"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                 <color key="textColor" red="0.4039215686" green="0.76078431369999999" blue="0.5568627451" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="default">
@@ -316,26 +316,6 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="G3T-8q-gOn"/>
                                     <constraint firstAttribute="width" constant="163" id="dRT-Yw-PFE"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="16"/>
-                                <color key="textColor" red="0.57790464740000003" green="0.57790464740000003" blue="0.57790464740000003" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="phone" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="czL-xc-vez">
-                                <rect key="frame" x="242" y="217" width="178" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="178" id="eAN-fq-r8G"/>
-                                    <constraint firstAttribute="height" constant="21" id="sgo-FJ-u4e"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="16"/>
-                                <color key="textColor" red="0.57790464740000003" green="0.57790464740000003" blue="0.57790464740000003" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="mail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dVS-6G-kgw">
-                                <rect key="frame" x="242" y="248" width="178" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="mVb-HT-4VM"/>
-                                    <constraint firstAttribute="width" constant="178" id="uoS-QT-Wug"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="16"/>
                                 <color key="textColor" red="0.57790464740000003" green="0.57790464740000003" blue="0.57790464740000003" alpha="1" colorSpace="calibratedRGB"/>
@@ -429,6 +409,34 @@
                                     <action selector="goToWebsite:" destination="Mva-LT-aVB" eventType="touchUpInside" id="TKu-L3-qgH"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NBP-s6-Rm2">
+                                <rect key="frame" x="242" y="246" width="178" height="23"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="178" id="5m9-Wd-aME"/>
+                                    <constraint firstAttribute="height" constant="23" id="sH0-Qk-3b0"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <state key="normal" title="email">
+                                    <color key="titleColor" red="0.4039215686" green="0.76078431369999999" blue="0.5568627451" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="sendMail:" destination="Mva-LT-aVB" eventType="touchUpInside" id="LXx-jk-COD"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jl8-xR-n5R">
+                                <rect key="frame" x="242" y="216" width="178" height="23"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="178" id="hYn-WV-dkS"/>
+                                    <constraint firstAttribute="height" constant="23" id="wEN-AH-Haw"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <state key="normal" title="phone">
+                                    <color key="titleColor" red="0.4039215686" green="0.76078431369999999" blue="0.5568627451" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="callPhonenumber:" destination="Mva-LT-aVB" eventType="touchUpInside" id="rMj-qG-7UT"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -440,6 +448,7 @@
                             <constraint firstItem="jAp-eI-iR7" firstAttribute="centerX" secondItem="iec-cB-2E0" secondAttribute="centerX" constant="57.5" id="2wS-QU-Jp9"/>
                             <constraint firstItem="2mY-So-B1W" firstAttribute="centerX" secondItem="iec-cB-2E0" secondAttribute="centerX" constant="-73" id="4vh-YG-31i"/>
                             <constraint firstItem="aHu-Qf-1f7" firstAttribute="top" secondItem="FBm-3d-CGT" secondAttribute="bottom" constant="8" id="5Zl-O9-Klx"/>
+                            <constraint firstItem="jl8-xR-n5R" firstAttribute="centerX" secondItem="iec-cB-2E0" secondAttribute="centerX" constant="31" id="Ajo-AK-NHd"/>
                             <constraint firstItem="0kF-4u-wj6" firstAttribute="trailing" secondItem="iec-cB-2E0" secondAttribute="trailingMargin" id="AyI-fg-sGa"/>
                             <constraint firstItem="rvL-Bx-g5Q" firstAttribute="top" secondItem="aI9-df-Ebc" secondAttribute="bottom" constant="10" id="E9X-4G-9yL"/>
                             <constraint firstItem="AJ4-Mj-pm2" firstAttribute="top" secondItem="vBB-6y-Z0T" secondAttribute="bottom" constant="8" id="GCY-Ac-ELS"/>
@@ -447,17 +456,18 @@
                             <constraint firstItem="FBm-3d-CGT" firstAttribute="top" secondItem="3TX-i5-faE" secondAttribute="bottom" constant="8" id="HMN-iu-Wx9"/>
                             <constraint firstItem="0kF-4u-wj6" firstAttribute="trailing" secondItem="iec-cB-2E0" secondAttribute="trailingMargin" id="IVD-hT-BuB"/>
                             <constraint firstItem="uJT-lq-7eR" firstAttribute="top" secondItem="AJ4-Mj-pm2" secondAttribute="bottom" constant="15" id="K26-YK-ijm"/>
-                            <constraint firstItem="czL-xc-vez" firstAttribute="centerX" secondItem="iec-cB-2E0" secondAttribute="centerX" constant="31" id="KFD-V4-PX0"/>
                             <constraint firstItem="jAp-eI-iR7" firstAttribute="top" secondItem="aHu-Qf-1f7" secondAttribute="bottom" constant="6" id="LRx-qN-Adf"/>
-                            <constraint firstItem="dVS-6G-kgw" firstAttribute="top" secondItem="czL-xc-vez" secondAttribute="bottom" constant="10" id="N3c-7Z-v01"/>
+                            <constraint firstItem="NBP-s6-Rm2" firstAttribute="centerX" secondItem="iec-cB-2E0" secondAttribute="centerX" constant="31" id="O1f-aR-dgP"/>
                             <constraint firstItem="DVP-4r-oCN" firstAttribute="top" secondItem="0kF-4u-wj6" secondAttribute="bottom" constant="12" id="O34-5O-oy0"/>
                             <constraint firstItem="0kF-4u-wj6" firstAttribute="centerX" secondItem="iec-cB-2E0" secondAttribute="centerX" id="PTY-QK-Rl2"/>
                             <constraint firstItem="jAp-eI-iR7" firstAttribute="top" secondItem="aHu-Qf-1f7" secondAttribute="bottom" constant="8" id="RQ7-10-MpF"/>
                             <constraint firstItem="aI9-df-Ebc" firstAttribute="top" secondItem="lzz-ZF-Rlx" secondAttribute="bottom" constant="8" id="Rym-wx-o6E"/>
+                            <constraint firstItem="jl8-xR-n5R" firstAttribute="top" secondItem="jAp-eI-iR7" secondAttribute="bottom" constant="7" id="S4i-gU-oGf"/>
                             <constraint firstItem="vBB-6y-Z0T" firstAttribute="centerX" secondItem="iec-cB-2E0" secondAttribute="centerX" id="S6E-4a-oAR"/>
                             <constraint firstItem="3TX-i5-faE" firstAttribute="top" secondItem="0kF-4u-wj6" secondAttribute="bottom" constant="8" id="Srb-Bb-lPE"/>
                             <constraint firstItem="0kF-4u-wj6" firstAttribute="leading" secondItem="iec-cB-2E0" secondAttribute="leadingMargin" id="Td6-RX-9Fp"/>
                             <constraint firstItem="N9e-0t-JyP" firstAttribute="centerX" secondItem="iec-cB-2E0" secondAttribute="centerX" constant="38" id="U7b-9N-8mo"/>
+                            <constraint firstItem="NBP-s6-Rm2" firstAttribute="top" secondItem="jl8-xR-n5R" secondAttribute="bottom" constant="7" id="XYN-zI-O58"/>
                             <constraint firstItem="aI9-df-Ebc" firstAttribute="centerX" secondItem="iec-cB-2E0" secondAttribute="centerX" constant="-92" id="XnM-Hn-H13"/>
                             <constraint firstItem="AJ4-Mj-pm2" firstAttribute="centerX" secondItem="iec-cB-2E0" secondAttribute="centerX" id="YR5-Vo-7ef"/>
                             <constraint firstItem="aI9-df-Ebc" firstAttribute="top" secondItem="lzz-ZF-Rlx" secondAttribute="bottom" constant="8" id="YwK-Ia-KXc"/>
@@ -475,19 +485,15 @@
                             <constraint firstItem="lzz-ZF-Rlx" firstAttribute="centerX" secondItem="iec-cB-2E0" secondAttribute="centerX" constant="-85" id="kpZ-4F-4Vp"/>
                             <constraint firstItem="8t8-fq-LsX" firstAttribute="top" secondItem="2mY-So-B1W" secondAttribute="bottom" constant="8" id="lt8-hp-YnG"/>
                             <constraint firstItem="lzz-ZF-Rlx" firstAttribute="top" secondItem="8t8-fq-LsX" secondAttribute="bottom" constant="8" id="m9X-81-xWc"/>
-                            <constraint firstItem="dVS-6G-kgw" firstAttribute="top" secondItem="czL-xc-vez" secondAttribute="bottom" constant="10" id="mLp-Uu-qZY"/>
                             <constraint firstItem="5WM-EE-cDe" firstAttribute="top" secondItem="8t8-fq-LsX" secondAttribute="bottom" constant="8" id="n1O-3W-8bK"/>
                             <constraint firstItem="r8G-ie-EZs" firstAttribute="leading" secondItem="iec-cB-2E0" secondAttribute="leadingMargin" id="nQz-yg-gNj"/>
                             <constraint firstItem="5WM-EE-cDe" firstAttribute="centerX" secondItem="iec-cB-2E0" secondAttribute="centerX" constant="-85" id="oM2-2U-mxK"/>
                             <constraint firstItem="8t8-fq-LsX" firstAttribute="centerX" secondItem="iec-cB-2E0" secondAttribute="centerX" constant="-85" id="oMk-GH-rvX"/>
                             <constraint firstItem="FBm-3d-CGT" firstAttribute="top" secondItem="3TX-i5-faE" secondAttribute="bottom" constant="8" id="opa-B3-LGX"/>
-                            <constraint firstItem="dVS-6G-kgw" firstAttribute="centerX" secondItem="iec-cB-2E0" secondAttribute="centerX" constant="31" id="pVE-Ml-zIi"/>
-                            <constraint firstItem="dVS-6G-kgw" firstAttribute="top" secondItem="czL-xc-vez" secondAttribute="bottom" constant="8" id="paP-WB-GNe"/>
                             <constraint firstItem="lzz-ZF-Rlx" firstAttribute="top" secondItem="0kF-4u-wj6" secondAttribute="bottom" constant="8" id="poG-s2-0I9"/>
                             <constraint firstItem="DVP-4r-oCN" firstAttribute="top" secondItem="0kF-4u-wj6" secondAttribute="bottom" constant="8" id="sUs-h6-UTg"/>
                             <constraint firstItem="Zpx-dP-MiC" firstAttribute="centerX" secondItem="iec-cB-2E0" secondAttribute="centerX" id="uGX-pJ-MmG"/>
                             <constraint firstItem="DVP-4r-oCN" firstAttribute="centerX" secondItem="iec-cB-2E0" secondAttribute="centerX" constant="-73" id="wqf-kd-Qjf"/>
-                            <constraint firstItem="czL-xc-vez" firstAttribute="top" secondItem="jAp-eI-iR7" secondAttribute="bottom" constant="8" id="xgg-Po-LlP"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
@@ -500,36 +506,27 @@
                                 <exclude reference="lt8-hp-YnG"/>
                                 <exclude reference="poG-s2-0I9"/>
                                 <exclude reference="Rym-wx-o6E"/>
-                                <exclude reference="E9X-4G-9yL"/>
                                 <exclude reference="Gxt-Zx-T2G"/>
+                                <exclude reference="E9X-4G-9yL"/>
                                 <exclude reference="Srb-Bb-lPE"/>
-                                <exclude reference="n1O-3W-8bK"/>
                                 <exclude reference="HMN-iu-Wx9"/>
-                                <exclude reference="mLp-Uu-qZY"/>
-                                <exclude reference="paP-WB-GNe"/>
+                                <exclude reference="n1O-3W-8bK"/>
                                 <exclude reference="LRx-qN-Adf"/>
                             </mask>
                         </variation>
                     </view>
                     <connections>
                         <outlet property="addressButton" destination="N9e-0t-JyP" id="gjl-Ut-Aag"/>
-                        <outlet property="addressLabel" destination="5WM-EE-cDe" id="loQ-Oc-NtB"/>
                         <outlet property="albumsButton" destination="vBB-6y-Z0T" id="vVs-cj-gau"/>
-                        <outlet property="companyLabel" destination="8t8-fq-LsX" id="cRI-mN-xmO"/>
-                        <outlet property="emailLabel" destination="rvL-Bx-g5Q" id="ZEN-cH-Y1C"/>
-                        <outlet property="phoneLabel" destination="aI9-df-Ebc" id="pix-cU-BDO"/>
+                        <outlet property="emailButton" destination="NBP-s6-Rm2" id="Mh5-k5-WRP"/>
+                        <outlet property="phoneButton" destination="jl8-xR-n5R" id="fUl-za-fJQ"/>
                         <outlet property="postsButton" destination="Zpx-dP-MiC" id="zWC-Td-gdv"/>
                         <outlet property="theCompanyLabel" destination="aHu-Qf-1f7" id="7HS-pG-cD7"/>
                         <outlet property="theIDLabel" destination="FBm-3d-CGT" id="1Wr-ke-HFv"/>
-                        <outlet property="theMailLabel" destination="dVS-6G-kgw" id="DZ0-LV-c10"/>
-                        <outlet property="thePhoneLabel" destination="czL-xc-vez" id="br7-HF-2B9"/>
                         <outlet property="theUsernameLabel" destination="3TX-i5-faE" id="aN0-D6-ueE"/>
                         <outlet property="titleLabel" destination="0kF-4u-wj6" id="T57-8a-whc"/>
                         <outlet property="todoButton" destination="AJ4-Mj-pm2" id="Tsh-te-Jrk"/>
-                        <outlet property="userIDLabel" destination="2mY-So-B1W" id="TqD-2o-rcI"/>
-                        <outlet property="usernameLabel" destination="DVP-4r-oCN" id="cfD-5h-9A5"/>
                         <outlet property="websiteButton" destination="jAp-eI-iR7" id="LIY-za-0vN"/>
-                        <outlet property="websiteLabel" destination="lzz-ZF-Rlx" id="V2O-4W-aR5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5jK-Nk-uZy" userLabel="First Responder" sceneMemberID="firstResponder"/>

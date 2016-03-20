@@ -25,14 +25,13 @@
     _theIDLabel.text = [NSString stringWithFormat:@"%@", _currentUser.userID];
     _theCompanyLabel.text = _currentUser.userCompany.compName;
     
-    _thePhoneLabel.text = _currentUser.userPhone;
-    _theMailLabel.text = _currentUser.userEmail;
-    
     NSString *addressString = [NSString stringWithFormat:@"%@, %@, %@, %@", _currentUser.userAddress.street, _currentUser.userAddress.suite, _currentUser.userAddress.zipcode, _currentUser.userAddress.city];
     [_websiteButton setTitle:_currentUser.userWebsite forState:UIControlStateNormal];
     [_addressButton setTitle:addressString forState:UIControlStateNormal];
+    [_emailButton setTitle:_currentUser.userEmail forState:UIControlStateNormal];
+    [_phoneButton setTitle:_currentUser.userPhone forState:UIControlStateNormal];
     
-    // getData
+    // getData - API request
     // here, not in previous view controller, to miminize the work load
     [self getData];
 }
@@ -62,6 +61,14 @@
 
 - (IBAction)goToAddress:(id)sender {
     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:[NSString stringWithFormat:@"http://maps.google.com/?q=%@,%@",_currentUser.userAddress.coordLat, _currentUser.userAddress.coordLon]]];
+}
+
+- (IBAction)sendMail:(id)sender {
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:[NSString stringWithFormat:@"mailto:%@", _currentUser.userEmail]]];
+}
+
+- (IBAction)callPhonenumber:(id)sender {
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:[[NSString stringWithFormat:@"tel:%@", _currentUser.userPhone] stringByRemovingPercentEncoding]]];
 }
 
 @end
