@@ -570,8 +570,8 @@
                                 </state>
                                 <variation key="default">
                                     <mask key="constraints">
-                                        <exclude reference="u5s-uQ-V40"/>
                                         <exclude reference="bp1-on-e6Y"/>
+                                        <exclude reference="u5s-uQ-V40"/>
                                     </mask>
                                 </variation>
                                 <connections>
@@ -591,9 +591,9 @@
                                 <nil key="highlightedColor"/>
                                 <variation key="default">
                                     <mask key="constraints">
-                                        <exclude reference="sjK-rL-m8n"/>
                                         <exclude reference="RPh-KM-OwD"/>
                                         <exclude reference="rDW-Wz-Lwa"/>
+                                        <exclude reference="sjK-rL-m8n"/>
                                     </mask>
                                 </variation>
                             </label>
