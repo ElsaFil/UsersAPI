@@ -84,7 +84,7 @@
             userActionPage.action = @"posts";
         } else if (sender == _albumsButton) {
             userActionPage.action = @"albums";
-        } else if (sender == _albumsButton) {
+        } else if (sender == _todoButton) {
             userActionPage.action = @"todos";
         }
     }

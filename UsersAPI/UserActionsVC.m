@@ -114,6 +114,9 @@
     NSError *error;
     
     if ([_action isEqualToString:@"posts"]) {
+        
+        _subtitleLabel.text = @"Posts";
+        
         // get list of Posts
         NSEntityDescription *entity = [NSEntityDescription entityForName:@"Post" inManagedObjectContext:self.managedObjectContext];
         [fetchRequest setEntity:entity];
@@ -132,10 +135,10 @@
         }];
     }
     else if ([_action isEqualToString:@"albums"]) {
-        
+        _subtitleLabel.text = @"Albums";
     }
     else if ([_action isEqualToString:@"todos"]) {
-        
+        _subtitleLabel.text = @"To-Dos";
     }    
     
 }
